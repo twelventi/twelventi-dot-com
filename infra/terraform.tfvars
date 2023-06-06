@@ -1,0 +1,5 @@
+project_name      = "twelventi"
+web_domain        = "twelventi.com"
+location          = "us-east1"
+google_creds_file = "~/twelventi.json"
+docker_image_sha = "sha256:3ba9049cd4e9dfec95e7002967dbc4b4c61c64adf835ca1ef50b6d45662fa736"

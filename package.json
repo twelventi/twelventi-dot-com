@@ -1,0 +1,24 @@
+{
+  "name": "twelventi-dot-com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:twelventi/twelventi-dot-com.git",
+  "author": "twelventi",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9"
+  },
+  "workspaces": [
+    "api",
+    "ui"
+  ],
+  "scripts": {
+    "docker-login": " cat ~/twelventi.json | docker login -u _json_key --password-stdin https://us-east1-docker.pkg.dev",
+    "build": "docker build . -t us-east1-docker.pkg.dev/twelventi/twelventi-repository/app -t twelventi",
+    "run": "docker run --env-file ./docker-env.env -p 3001:3001 -t us-east1-docker.pkg.dev/twelventi/twelventi-repository/app",
+    "push": "docker push us-east1-docker.pkg.dev/twelventi/twelventi-repository/app"
+  },
+  "private": true,
+  "packageManager": "yarn@3.6.0"
+}
