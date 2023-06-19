@@ -8,4 +8,5 @@ SHA=$(docker inspect --format='{{index .RepoDigests 0}}' twelventi  | perl -wnE'
 cat ./infra/terraform.tfvars | sed -e "s/docker_image_sha = \"\(.*\)\"/docker_image_sha = \"${SHA}\"/g" | tee ./infra/terraform.tfvars
 
 cd infra 
+# terraform init
 terraform apply
