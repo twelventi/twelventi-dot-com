@@ -6,6 +6,7 @@
   "author": "twelventi",
   "license": "MIT",
   "dependencies": {
+    "fast-xml-parser": "^4.2.4",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
   },
