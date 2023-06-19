@@ -38,9 +38,9 @@ export function CursorHandler({ children }: PropsWithChildren) {
           const y = window.innerHeight / 2 + data.y;
           if (
             x > window.innerWidth ||
-            y > window.innerHeight ||
+            y - window.scrollY > window.innerHeight ||
             x < -20 ||
-            y < -20
+            y - window.scrollY < -20
           ) {
             delete cursors[data.userid];
           } else {
@@ -72,7 +72,7 @@ export function CursorHandler({ children }: PropsWithChildren) {
   const onMouseMove: MouseEventHandler = useCallback(
     (ev: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
       const x = ev.clientX - window.innerWidth / 2;
-      const y = ev.clientY - window.innerHeight / 2;
+      const y = ev.clientY - window.innerHeight / 2 + window.scrollY;
       const move = {
         x,
         y,
