@@ -68,8 +68,7 @@ export const MainLayout = () => {
             </Link>
           </div>
           <div className="bg-base-100 p-7 h-full h-max min-h-max min-h-full">
-            This is my personal tech blog. I am currently available for hire.
-            Opinions are my own.
+            This is my personal tech blog. Opinions are my own.
           </div>
         </div>
       </div>
