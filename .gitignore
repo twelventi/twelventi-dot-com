@@ -136,3 +136,4 @@ twelventi*.json
 docker-env.env
 
 infra/.terraform
+.DS_Store
